@@ -28,11 +28,13 @@ export default function Footer() {
           {/* Col 1: Brand & Role */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1.5px] shadow-lg shadow-indigo-500/20">
-                <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[10px] flex items-center justify-center">
-                  <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300 text-base font-mono">
-                    RM
-                  </span>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1.5px] shadow-lg shadow-indigo-500/20 overflow-hidden">
+                <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[9px] overflow-hidden flex items-center justify-center">
+                  <img
+                    src={personalInfo.avatar}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
               <div>

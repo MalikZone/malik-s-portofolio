@@ -88,6 +88,25 @@ export default function ContactPage() {
         {/* Left Column: Direct Contact Info */}
         <div className="lg:col-span-5 space-y-6">
           <div className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 shadow-xl space-y-6">
+            {/* Profile Avatar Card Snippet */}
+            <div className="flex items-center gap-3.5 pb-5 border-b border-slate-200 dark:border-slate-800">
+              <div className="relative w-14 h-14 rounded-2xl p-0.5 bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 shrink-0 shadow-md">
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover object-top rounded-[14px]"
+                />
+                <span className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 shadow-sm" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-extrabold text-slate-900 dark:text-white text-base truncate">{personalInfo.name}</h3>
+                <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold truncate">{personalInfo.role}</p>
+                <span className="inline-block text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">
+                  ● Available for Hire
+                </span>
+              </div>
+            </div>
+
             <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
               <span>{ui.quickContactChannels}</span>

@@ -121,8 +121,38 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Card / Interactive Terminal Mockup */}
-            <div className="lg:col-span-5">
+            {/* Right Card / Interactive Terminal & Avatar Mockup */}
+            <div className="lg:col-span-5 space-y-4">
+              {/* Profile Card Snippet */}
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-xl backdrop-blur-xl group hover:border-indigo-500/40 transition-all">
+                <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl p-0.5 bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 shadow-lg shadow-indigo-500/20 shrink-0">
+                  <img
+                    src={personalInfo.avatar}
+                    alt={personalInfo.name}
+                    className="w-full h-full object-cover object-top rounded-[14px]"
+                  />
+                  <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 shadow-sm" title="Active & Available" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-extrabold text-slate-900 dark:text-white text-base sm:text-lg truncate">
+                      {personalInfo.name}
+                    </h3>
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400">
+                      Verified
+                    </span>
+                  </div>
+                  <p className="text-xs font-bold text-indigo-600 dark:text-indigo-400 truncate mt-0.5">
+                    {personalInfo.role}
+                  </p>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-1 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+                    Jakarta, ID • {personalInfo.experienceYears}
+                  </p>
+                </div>
+              </div>
+
+              {/* Terminal Window Mockup */}
               <div className="relative mx-auto max-w-md lg:max-w-none rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl p-5 text-slate-200 backdrop-blur-xl group hover:border-indigo-500/50 transition-all">
                 {/* Window header */}
                 <div className="flex items-center justify-between pb-4 border-b border-slate-800">

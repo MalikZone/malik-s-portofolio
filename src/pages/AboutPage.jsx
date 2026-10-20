@@ -67,18 +67,21 @@ export default function AboutPage() {
 
         {/* Quick Profile Snapshot Card */}
         <div className="lg:col-span-4">
-          <div className="p-6 rounded-3xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-xl space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 p-0.5 shadow-xl shadow-indigo-600/20">
-              <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[14px] flex items-center justify-center">
-                <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-cyan-500 dark:from-indigo-400 dark:to-cyan-300 font-mono">
-                  RM
-                </span>
+          <div className="p-6 sm:p-7 rounded-3xl bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 shadow-xl space-y-5">
+            <div className="relative mx-auto w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-cyan-400 p-1 shadow-2xl shadow-indigo-500/20 group">
+              <div className="w-full h-full rounded-[22px] overflow-hidden bg-slate-100 dark:bg-slate-950 flex items-center justify-center relative">
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
+              <span className="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-white dark:border-slate-900 shadow-md" title="Available for Opportunities" />
             </div>
 
-            <div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white">{personalInfo.name}</h3>
-              <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold">{personalInfo.role}</p>
+            <div className="text-center">
+              <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">{personalInfo.name}</h3>
+              <p className="text-xs text-indigo-600 dark:text-indigo-400 font-bold mt-0.5">{personalInfo.role}</p>
             </div>
 
             <div className="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800 text-xs text-slate-700 dark:text-slate-300">

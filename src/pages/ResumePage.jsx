@@ -78,46 +78,57 @@ export default function ResumePage() {
       {/* Main Resume Sheet */}
       <div className="rounded-3xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-2xl p-8 sm:p-12 text-slate-800 dark:text-slate-200 space-y-10 print:bg-white print:text-black print:p-0 print:border-none print:shadow-none">
         {/* Header Block */}
-        <div className="border-b border-slate-200 dark:border-slate-800 print:border-slate-300 pb-8 space-y-4">
-          <div className="space-y-1">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white print:text-black tracking-tight uppercase">
-              {personalInfo.name}
-            </h1>
-            <div className="text-base sm:text-lg font-bold text-indigo-600 dark:text-indigo-400 print:text-indigo-700 tracking-wider uppercase font-mono">
-              FULLSTACK DEVELOPER
+        <div className="border-b border-slate-200 dark:border-slate-800 print:border-slate-300 pb-8 flex flex-col-reverse sm:flex-row sm:items-center justify-between gap-6">
+          <div className="space-y-4 flex-1">
+            <div className="space-y-1">
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white print:text-black tracking-tight uppercase">
+                {personalInfo.name}
+              </h1>
+              <div className="text-base sm:text-lg font-bold text-indigo-600 dark:text-indigo-400 print:text-indigo-700 tracking-wider uppercase font-mono">
+                FULLSTACK DEVELOPER
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 print:text-slate-600">
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
+                <span>{personalInfo.fullAddress}</span>
+              </span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300 print:text-slate-700 pt-1">
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
+              >
+                <Mail className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
+                <span>{personalInfo.email}</span>
+              </a>
+              <span className="text-slate-400">|</span>
+              <span className="flex items-center gap-1.5 font-medium">
+                <Phone className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
+                <span>{personalInfo.phone}</span>
+              </span>
+              <span className="text-slate-400">|</span>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
+              >
+                <LinkedinIcon className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
+                <span>linkedin.com/in/ridwan-malik-908499152</span>
+              </a>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm text-slate-600 dark:text-slate-400 print:text-slate-600">
-            <span className="flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
-              <span>{personalInfo.fullAddress}</span>
-            </span>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-y-2 gap-x-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300 print:text-slate-700 pt-1">
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
-            >
-              <Mail className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
-              <span>{personalInfo.email}</span>
-            </a>
-            <span className="text-slate-400">|</span>
-            <span className="flex items-center gap-1.5 font-medium">
-              <Phone className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
-              <span>{personalInfo.phone}</span>
-            </span>
-            <span className="text-slate-400">|</span>
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors font-medium"
-            >
-              <LinkedinIcon className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 print:text-slate-700" />
-              <span>linkedin.com/in/ridwan-malik-908499152</span>
-            </a>
+          {/* Photo on resume */}
+          <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-indigo-500/30 dark:border-indigo-500/50 shadow-lg shrink-0 print:border-slate-400">
+            <img
+              src={personalInfo.avatar}
+              alt={personalInfo.name}
+              className="w-full h-full object-cover object-top"
+            />
           </div>
         </div>
 
