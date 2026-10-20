@@ -30,7 +30,7 @@ export default function RecruiterBanner() {
       <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500/10 dark:bg-indigo-500/15 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
       <div className="absolute bottom-0 left-0 w-60 h-60 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none -ml-20 -mb-20" />
 
-      <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+      <div className="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-6 lg:gap-8">
         <div className="space-y-3.5 max-w-2xl">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-500/30">
             <Sparkles className="w-3.5 h-3.5" />
@@ -62,29 +62,29 @@ export default function RecruiterBanner() {
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 shrink-0">
           <a
             href={personalInfo.cvUrl}
             download="CV-Ridwan-Malik.pdf"
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl font-bold text-sm text-white bg-indigo-600 hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-600/30 hover:scale-[1.02] cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-indigo-600 hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-600/30 hover:scale-[1.02] cursor-pointer whitespace-nowrap"
           >
-            <Download className="w-4 h-4" />
+            <Download className="w-4 h-4 shrink-0" />
             <span>{rb.downloadCv}</span>
           </a>
 
           <button
             onClick={handleCopyEmail}
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/90 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 hover:border-slate-400 transition-all cursor-pointer shadow-sm"
+            className="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/90 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700 hover:border-slate-400 transition-all cursor-pointer shadow-sm whitespace-nowrap"
             title="Copy Email to Clipboard"
           >
             {copied ? (
               <>
-                <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <span className="text-emerald-600 dark:text-emerald-400">{rb.copied}</span>
               </>
             ) : (
               <>
-                <Copy className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <Copy className="w-4 h-4 text-slate-500 dark:text-slate-400 shrink-0" />
                 <span>{rb.copyEmail}</span>
               </>
             )}
@@ -92,9 +92,9 @@ export default function RecruiterBanner() {
 
           <Link
             to="/contact"
-            className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold text-sm text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-900/90 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all"
+            className="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-900/90 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 hover:border-indigo-500/50 transition-all whitespace-nowrap"
           >
-            <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+            <Mail className="w-4 h-4 text-indigo-600 dark:text-indigo-400 shrink-0" />
             <span>{rb.sendMessage}</span>
           </Link>
         </div>
