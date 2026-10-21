@@ -129,12 +129,12 @@ export default function Navbar() {
             {/* Download CV CTA */}
             <a
               href={personalInfo.cvUrl}
-              download="CV-Ridwan-Malik.pdf"
+              download="Ridwan Malik CV.pdf"
               className="hidden md:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-white hover:bg-slate-50 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700/80 hover:border-indigo-500/50 transition-all shadow-sm"
               title="Download Official CV (PDF)"
             >
               <Download className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
-              <span>CV.pdf</span>
+              <span>CV (PDF)</span>
             </a>
 
             {/* Contact CTA */}
@@ -196,7 +196,7 @@ export default function Navbar() {
             <div className="pt-4 mt-2 border-t border-slate-200 dark:border-slate-800/80 flex flex-col gap-2">
               <a
                 href={personalInfo.cvUrl}
-                download="CV-Ridwan-Malik.pdf"
+                download="Ridwan Malik CV.pdf"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-800 dark:text-slate-200"
               >
                 <Download className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />

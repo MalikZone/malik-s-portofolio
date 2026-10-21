@@ -104,7 +104,7 @@ export default function HomePage() {
 
                 <a
                   href={personalInfo.cvUrl}
-                  download="CV-Ridwan-Malik.pdf"
+                  download="Ridwan Malik CV.pdf"
                   className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl font-bold text-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-900/90 hover:bg-slate-50 dark:hover:bg-slate-800 border border-slate-300 dark:border-slate-700/80 hover:border-indigo-500/50 transition-all shadow-sm"
                 >
                   <Download className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />

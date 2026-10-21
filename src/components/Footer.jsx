@@ -104,7 +104,7 @@ export default function Footer() {
               <div className="pt-2">
                 <a
                   href={personalInfo.cvUrl}
-                  download="CV-Ridwan-Malik.pdf"
+                  download="Ridwan Malik CV.pdf"
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-50 dark:bg-indigo-600/20 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-600/30 border border-indigo-200 dark:border-indigo-500/30 transition-all"
                 >
                   <Download className="w-3.5 h-3.5" />

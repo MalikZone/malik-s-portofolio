@@ -65,7 +65,7 @@ export default function RecruiterBanner() {
         <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 shrink-0">
           <a
             href={personalInfo.cvUrl}
-            download="CV-Ridwan-Malik.pdf"
+            download="Ridwan Malik CV.pdf"
             className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-xl font-bold text-xs sm:text-sm text-white bg-indigo-600 hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-600/30 hover:scale-[1.02] cursor-pointer whitespace-nowrap"
           >
             <Download className="w-4 h-4 shrink-0" />
