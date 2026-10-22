@@ -21,9 +21,9 @@ export default function App() {
       <LanguageProvider>
         <BrowserRouter>
           <ScrollToTop />
-          <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-250">
+          <div className="min-h-screen flex flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 selection:bg-indigo-500 selection:text-white transition-colors duration-250 print:bg-white print:text-black print:min-h-0 print:block print:p-0 print:m-0">
             <Navbar />
-            <main className="flex-1">
+            <main className="flex-1 print:p-0 print:m-0 print:block">
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/projects" element={<ProjectsPage />} />

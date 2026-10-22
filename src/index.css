@@ -95,3 +95,75 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* ==========================================================================
+   PRINT STYLES FOR CLEAN RESUME DOWNLOAD (NO HEADER / NO FOOTER)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0; /* Suppresses browser URL header, title, date, and page numbers */
+  }
+
+  html,
+  body {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 297mm !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Force hide all website headers, footers, navigation, buttons, and decorative elements */
+  header,
+  nav,
+  footer,
+  aside,
+  .print\:hidden,
+  [data-no-print] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* Do not print URL links after text */
+  a[href]:after {
+    content: "" !important;
+  }
+
+  /* Print container: strictly formatted for exactly 1 page (satu lembar A4) */
+  #resume-sheet {
+    padding: 8mm 10mm !important;
+    margin: 0 auto !important;
+    width: 210mm !important;
+    max-height: 297mm !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-after: avoid !important;
+    break-inside: avoid !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  /* Prevent awkward page cuts */
+  .print-avoid-break,
+  .print\:break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}

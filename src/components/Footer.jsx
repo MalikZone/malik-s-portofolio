@@ -19,7 +19,7 @@ export default function Footer() {
   const ui = data.ui;
 
   return (
-    <footer className="relative bg-slate-100/90 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 pt-16 pb-12 overflow-hidden transition-colors">
+    <footer className="relative bg-slate-100/90 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 pt-16 pb-12 overflow-hidden transition-colors print:hidden">
       {/* Background subtle glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-48 bg-gradient-to-b from-indigo-500/10 to-transparent pointer-events-none blur-3xl" />
 
