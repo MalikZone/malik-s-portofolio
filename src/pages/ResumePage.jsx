@@ -243,7 +243,7 @@ export default function ResumePage() {
                   1. Hadirin
                 </span>
                 <span className="text-[10px] px-2 py-0.5 rounded-full font-bold bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 print:bg-slate-200 print:text-black">
-                  B2B SaaS / Workforce Management AI
+                  AI & Process Orchestration Engine
                 </span>
               </div>
               <div className="text-[11px] font-mono text-indigo-600 dark:text-indigo-400 print:text-slate-800 font-semibold">
@@ -254,13 +254,13 @@ export default function ResumePage() {
             {/* Tagline */}
             <div className="text-xs font-medium text-slate-800 dark:text-slate-200 print:text-black">
               {isEn
-                ? 'AI-Powered Multi-Tenant Workforce & Smart Attendance SaaS Platform'
-                : 'Platform Manajemen Tenaga Kerja & Presensi Cerdas Multi-Tenant Berbasis AI'}
+                ? 'Hadirin — AI Workforce & Process Orchestration Engine'
+                : 'Hadirin — AI Workforce & Process Orchestration Engine'}
             </div>
 
             {/* Tech Badges */}
             <div className="flex flex-wrap gap-1.5 text-[9.5px] font-mono">
-              {['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MySQL', 'Gemini API', 'Geofencing', 'Dynamic Roster', 'Granular RBAC'].map((t) => (
+              {['Python 3.12', 'FastAPI', 'Node.js', 'Temporal.io', 'Qdrant', 'Ollama (Qwen 2.5)', 'FastEmbed', 'PostgreSQL', 'MySQL', 'Docker Compose'].map((t) => (
                 <span
                   key={t}
                   className="px-2 py-0.5 rounded bg-white dark:bg-slate-900 print:bg-white text-slate-700 dark:text-slate-300 print:text-black border border-slate-200 dark:border-slate-800 print:border-slate-300 font-medium"
@@ -274,27 +274,35 @@ export default function ResumePage() {
             <ul className="text-[10.5px] sm:text-[11px] text-slate-700 dark:text-slate-300 print:text-slate-800 space-y-1 list-disc pl-4 leading-relaxed">
               <li>
                 <strong className="text-slate-900 dark:text-white print:text-black">
-                  {isEn ? 'Multi-Tenant Isolation & Granular RBAC: ' : 'Isolasi Multi-Tenant & Granular RBAC: '}
+                  {isEn ? 'Semantic RAG Gatekeeper: ' : 'Semantic RAG Gatekeeper: '}
                 </strong>
                 {isEn
-                  ? 'Architected strict organization-level data segregation with a flexible matrix of 35+ permissions across 9 core modules to ensure complete authority segregation.'
-                  : 'Membangun arsitektur isolasi data per tenant dengan 35+ permissions dinamis di 9 modul sistem untuk fleksibilitas hak akses dan kepatuhan tata kelola.'}
+                  ? 'Engineered a low-latency AI gateway with FastAPI, Qdrant Vector DB, and FastEmbed (BAAI/bge-m3), filtering 90%+ operational chatter while deterministically enriching user context (shift rosters, leave quotas).'
+                  : 'Mengembangkan low-latency AI gateway dengan FastAPI, Qdrant Vector DB, dan FastEmbed (BAAI/bge-m3), memfilter 90%+ percakapan non-operasional dan memperkaya konteks pengguna secara deterministik (roster shift, kuota cuti).'}
               </li>
               <li>
                 <strong className="text-slate-900 dark:text-white print:text-black">
-                  {isEn ? 'Smart Geofenced Attendance & Overnight Roster: ' : 'Presensi Geofencing & Shift Lintas Malam: '}
+                  {isEn ? 'Structured Entity Extraction: ' : 'Structured Entity Extraction: '}
                 </strong>
                 {isEn
-                  ? 'Engineered accurate GPS radius validation combined with an advanced shift roster algorithm handling cross-midnight overnight schedules (e.g. 22:00–06:00 next day) without duplicate clock-in collisions.'
-                  : 'Validasi presensi radius GPS akurat dan engine penjadwalan shift dinamis yang menangani jadwal kerja lintas malam (cross-midnight) tanpa tabrakan log absensi.'}
+                  ? 'Deployed Qwen 2.5 (7B) over Ollama enforcing strict JSON schema outputs and real-time timezone resolution for conversational calendar arithmetic.'
+                  : 'Menerapkan model Qwen 2.5 (7B) via Ollama dengan penegakan skema output JSON ketat dan resolusi zona waktu real-time untuk kalkulasi kalender percakapan.'}
               </li>
               <li>
                 <strong className="text-slate-900 dark:text-white print:text-black">
-                  {isEn ? 'AI Workforce Co-Pilot: ' : 'AI Workforce Co-Pilot: '}
+                  {isEn ? 'Durable Workflow Execution: ' : 'Durable Workflow Execution: '}
                 </strong>
                 {isEn
-                  ? 'Integrated Gemini API for natural language conversational leave requests (Chat-to-Action), automated team capacity impact analysis for supervisors, and tenant HR policy Q&A assistant.'
-                  : 'Integrasi LLM (Gemini API) untuk pengajuan izin via percakapan natural (Chat-to-Action), simulasi dampak kapasitas tim saat review izin, dan asisten SOP HR tenant.'}
+                  ? 'Implemented Temporal.io state machines orchestrating multi-step sagas (atomic activities: policy validation, segregation-of-duties enforcement, MySQL commits, and manager approval dispatching).'
+                  : 'Mengimplementasikan state machine Temporal.io untuk mengorkestrasi saga multi-tahap (aktivitas atomik: validasi SOP, penegakan Segregation-of-Duties, commit database MySQL, dan pengiriman notifikasi approval manajer).'}
+              </li>
+              <li>
+                <strong className="text-slate-900 dark:text-white print:text-black">
+                  {isEn ? 'Human-in-the-Loop (HITL) Safety: ' : 'Human-in-the-Loop (HITL) Safety: '}
+                </strong>
+                {isEn
+                  ? 'Built a two-phase approval pattern via Telegram Bot API and Node.js/Express, staging short-lived request drafts prior to irreversible database state mutations.'
+                  : 'Membangun pola persetujuan dua fase via Telegram Bot API dan Node.js/Express, melakukan staging draft permintaan berumur pendek sebelum mutasi status permanen ke database.'}
               </li>
             </ul>
 
@@ -304,8 +312,8 @@ export default function ResumePage() {
               <span>
                 <strong>{isEn ? 'Verified Impact: ' : 'Dampak Bisnis Terbukti: '}</strong>
                 {isEn
-                  ? 'Automated 70% of manual attendance operations, eliminated buddy-punching, and provided leadership with a real-time executive presence dashboard.'
-                  : 'Mengotomasi 70% beban administrasi absensi manual, mengeliminasi kecurangan absensi, dan memberi visibilitas real-time bagi manajemen perusahaan.'}
+                  ? 'Filtered 90%+ operational chatter, eliminated invalid database mutations, and delivered 100% durable, audit-proof workflow execution.'
+                  : 'Memfilter 90%+ percakapan non-operasional, mengeliminasi mutasi data tidak valid, dan menjamin 100% eksekusi workflow tahan gangguan (audit-proof).'}
               </span>
             </div>
           </div>

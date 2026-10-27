@@ -30,7 +30,7 @@ export const portfolioData = {
         { value: '5+ Years', label: 'Full-Time Experience', desc: 'Solid track record in technology agencies & high-growth digital platforms' },
         { value: '+40%', label: 'Team & Project Efficiency', desc: 'Achieved by introducing modular code standards and optimal workflows at PT Teltics Media' },
         { value: '+30%', label: 'Page Load Speedup', desc: 'Achieved via query tuning, caching, and code refactoring at Importir.com' },
-        { value: '2 Enterprise', label: 'Flagship B2B Platforms', desc: 'Hadirin (Multi-Tenant SaaS) & Kerja Cerdas (Intelligent Procurement)' }
+        { value: '2 Enterprise', label: 'Flagship B2B Platforms', desc: 'Hadirin (AI Workforce Engine) & Kerja Cerdas (Intelligent Procurement)' }
       ],
       recruiterNotes: [
         'Available for Senior Fullstack Developer / Tech Lead / Backend Architect roles',
@@ -190,48 +190,48 @@ export const portfolioData = {
       {
         id: 'hadirin',
         name: 'Hadirin',
-        tagline: 'AI-Powered Multi-Tenant Workforce & Smart Attendance SaaS',
-        category: 'B2B SaaS / Enterprise Web App',
+        tagline: 'AI Workforce & Process Orchestration Engine',
+        category: 'AI & Workflow Orchestration / Enterprise B2B SaaS',
         role: 'Full-Stack Developer & Product Architect',
         featured: true,
         thumbnail: '/projects/hadirin/screen-1-dashboard.png',
-        overview: 'A modern B2B SaaS workforce and attendance management platform integrating geofencing attendance, dynamic shift roster scheduling (including overnight cross-midnight shifts), granular RBAC (35+ permissions across 9 modules), and an AI Assistant co-pilot for HR operations.',
-        executiveSummary: 'Hadirin is a next-generation B2B SaaS workforce management platform designed to eliminate administrative friction in attendance tracking, shift scheduling, and HR governance. Built with secure Multi-Tenant Isolation and Dynamic Granular RBAC, Hadirin handles real-world operational complexities—from cross-midnight shifts and multi-tier approval hierarchies (Staff → Supervisor → HR) to an AI Workforce Co-pilot providing formless requests and instant team capacity impact analysis.',
+        overview: 'An enterprise AI workforce and process orchestration platform that bridges unstructured conversational communication and mission-critical business systems. Features a Semantic RAG gatekeeper, localized SLM entity extraction with Ollama (Qwen 2.5), durable Temporal.io sagas, and Human-in-the-Loop (HITL) safety verification.',
+        executiveSummary: 'Hadirin is an advanced AI Workforce & Process Orchestration Engine engineered to automate multi-step operational workflows while preventing data corruption and hallucinations. Built with a FastAPI and Qdrant semantic gateway, Hadirin filters 90%+ operational chatter, extracts structured calendar arithmetic via localized Qwen 2.5 (7B), and enforces durable multi-step state machines with Temporal.io before committing state mutations.',
         star: {
-          situation: 'Conventional attendance applications are rigid, form-heavy, error-prone, fail to handle complex overnight shift schedules (cross-midnight), and leave managers blind to team active capacity when reviewing leave requests.',
-          task: 'Architect and build an end-to-end multi-tenant SaaS platform capable of serving multiple independent enterprise tenants with strict data segregation, accurate radius geofencing, and AI-assisted workflows.',
+          situation: 'Operational workforce workflows (shift swaps, leave approvals, capacity planning) are bottlenecked by chaotic chat threads, non-deterministic forms, and manual database record updates that risk race conditions and operational policy violations.',
+          task: 'Architect a low-latency, hallucination-free AI orchestration engine capable of converting informal conversational requests into strictly validated, durable multi-step sagas with human oversight.',
           action: [
-            'Built complete Multi-Tenant Isolation architecture with Dynamic Granular RBAC supporting 35+ permissions across 9 core system modules.',
-            'Engineered smart GPS geofencing attendance validation combined with dynamic shift roster algorithms supporting cross-midnight schedules (e.g., 22:00 to 06:00 next day).',
-            'Implemented a multi-tier hierarchical approval state machine (Staff → Team Leader → HR Admin) for leave and overtime requests.',
-            'Integrated an AI Workforce Co-pilot using LLM (Gemini API): Chat-to-Action for formless conversational leave requests, Context-Aware Approval for team capacity impact evaluation, and HR policy Q&A assistant.',
-            'Designed a high-throughput relational MySQL schema with strict foreign key constraints, soft deletes, and complete audit logging.'
+            'Semantic RAG Gatekeeper: Engineered a low-latency AI gateway with FastAPI, Qdrant Vector DB, and FastEmbed (BAAI/bge-m3), filtering 90%+ operational chatter while deterministically enriching user context (shift rosters, leave quotas).',
+            'Structured Entity Extraction: Deployed Qwen 2.5 (7B) over Ollama enforcing strict JSON schema outputs and real-time timezone resolution for conversational calendar arithmetic.',
+            'Durable Workflow Execution: Implemented Temporal.io state machines orchestrating multi-step sagas (atomic activities: policy validation, segregation-of-duties enforcement, MySQL commits, and manager approval dispatching).',
+            'Human-in-the-Loop (HITL) Safety: Built a two-phase approval pattern via Telegram Bot API and Node.js/Express, staging short-lived request drafts prior to irreversible database state mutations.',
+            'High-Performance Relational & Vector Persistence: Designed synchronized schemas across PostgreSQL, MySQL, and Qdrant with complete audit trails and atomic rollback capability.'
           ],
-          result: 'Delivered an enterprise-ready B2B platform that automated 70% of manual attendance and leave workflows, while providing management with real-time operational transparency.'
+          result: 'Eliminated 90%+ operational chatter, achieved 100% deterministic schema compliance for workforce requests, and guaranteed fault-tolerant workflow execution without orphaned database records.'
         },
         keyFeatures: [
           {
+            title: 'Semantic RAG Gatekeeper',
+            desc: 'Low-latency AI gateway using FastAPI, Qdrant, and FastEmbed (BAAI/bge-m3) filtering 90%+ operational chatter and injecting deterministic roster context.'
+          },
+          {
+            title: 'Structured Entity Extraction (Qwen 2.5)',
+            desc: 'Localized Qwen 2.5 (7B) over Ollama enforcing rigid JSON schemas and timezone-aware conversational calendar arithmetic.'
+          },
+          {
+            title: 'Durable Workflow Execution (Temporal.io)',
+            desc: 'Fault-tolerant state machines coordinating multi-step sagas: policy checks, Segregation-of-Duties, and atomic database commits.'
+          },
+          {
+            title: 'Human-in-the-Loop (HITL) Safety',
+            desc: 'Two-phase approval pattern via Telegram Bot API and Node.js/Express staging temporary request drafts before database commits.'
+          },
+          {
             title: 'Multi-Tenant Isolation & Granular RBAC',
-            desc: 'Complete data segregation per organization with a dynamic matrix of 35+ permissions across 9 system modules.'
-          },
-          {
-            title: 'Smart Geofenced Attendance & Cross-Midnight Roster',
-            desc: 'Precise location-based clock-in/out engine paired with overnight shift logic without duplicate log collisions.'
-          },
-          {
-            title: 'Multi-Tier Hierarchical Approval Lifecycles',
-            desc: 'Structured approval chains for leave, permissions, and overtime with real-time status transitions and notifications.'
-          },
-          {
-            title: 'AI Workforce Co-Pilot (Core Differentiator)',
-            desc: 'Conversational assistant: Chat-to-Action for formless requests, context-aware team impact calculation, and tenant HR policy Q&A.'
-          },
-          {
-            title: 'Real-Time Executive Analytics Dashboard',
-            desc: 'Live command center displaying attendance percentages, late trends, departmental headcounts, and payroll readiness.'
+            desc: 'Secure organization segregation with 35+ permissions across 9 core modules to govern operational data boundaries.'
           }
         ],
-        techStack: ['React.js', 'Tailwind CSS', 'Context API', 'Lucide Icons', 'Vite', 'Node.js', 'Express.js', 'RESTful API', 'MySQL', 'Gemini API'],
+        techStack: ['Python 3.12', 'FastAPI', 'Node.js', 'Temporal.io', 'Qdrant', 'Ollama (Qwen 2.5)', 'FastEmbed', 'PostgreSQL', 'MySQL', 'Docker Compose'],
         screenshots: [
           {
             url: '/projects/hadirin/screen-1-dashboard.png',
@@ -448,7 +448,7 @@ export const portfolioData = {
         { value: '5+ Tahun', label: 'Pengalaman Developer', desc: 'Track record solid di startup & agensi teknologi terkemuka' },
         { value: '+40%', label: 'Efisiensi Tim & Proyek', desc: 'Pencapaian implementasi standar coding & workflow optimal di PT Teltics Media' },
         { value: '+30%', label: 'Kecepatan Loading Website', desc: 'Optimasi query database & arsitektur frontend di Importir.com' },
-        { value: '2 Enterprise', label: 'Unggulan Proyek B2B', desc: 'Hadirin (Multi-Tenant SaaS) & Kerja Cerdas (Intelligent Procurement)' }
+        { value: '2 Enterprise', label: 'Unggulan Proyek B2B', desc: 'Hadirin (AI Workforce Engine) & Kerja Cerdas (Intelligent Procurement)' }
       ],
       recruiterNotes: [
         'Tersedia untuk posisi Senior Fullstack Developer / Tech Lead / Backend Engineer',
@@ -608,48 +608,48 @@ export const portfolioData = {
       {
         id: 'hadirin',
         name: 'Hadirin',
-        tagline: 'AI-Powered Multi-Tenant Workforce & Smart Attendance SaaS',
-        category: 'B2B SaaS / Enterprise Web App',
+        tagline: 'AI Workforce & Process Orchestration Engine',
+        category: 'AI & Workflow Orchestration / Enterprise B2B SaaS',
         role: 'Full-Stack Developer & Product Architect',
         featured: true,
         thumbnail: '/projects/hadirin/screen-1-dashboard.png',
-        overview: 'Platform B2B SaaS manajemen presensi dan tenaga kerja modern yang memadukan presensi berbasis geofencing, penjadwalan dynamic shift roster (termasuk shift lintas malam/cross-midnight), sistem hak akses granular (RBAC), serta asisten AI cerdas sebagai co-pilot operasional HR dan manajemen.',
-        executiveSummary: 'Hadirin adalah platform B2B SaaS Workforce & Attendance Management modern yang dirancang untuk mengeliminasi friksi administratif pada pengelolaan absensi, shift kerja, dan tata kelola SDM perusahaan. Dibangun dengan arsitektur Multi-Tenant Isolation dan sistem Dynamic Granular RBAC yang fleksibel, Hadirin menangani kompleksitas operasional dunia kerja nyata—mulai dari shift lintas malam (cross-midnight shifts), alur persetujuan bertingkat (multi-tier approval) untuk cuti dan lembur, hingga integrasi AI Assistant sebagai pembeda utama yang membantu otomasi pengajuan karyawan serta analisis dampak beban kerja tim secara real-time.',
+        overview: 'Platform engine AI workforce dan orkestrasi proses bisnis cerdas yang menjembatani percakapan informal dan sistem inti perusahaan. Dilengkapi Semantic RAG Gatekeeper, ekstraksi entitas terstruktur dengan Qwen 2.5 (7B) via Ollama, eksekusi workflow tahan gangguan Temporal.io, dan verifikasi persetujuan Human-in-the-Loop (HITL).',
+        executiveSummary: 'Hadirin adalah AI Workforce & Process Orchestration Engine mutakhir yang dirancang untuk mengotomasi alur kerja operasional multi-tahap tanpa risiko halusinasi atau kerusakan data. Memanfaatkan gateway semantik FastAPI dan Qdrant Vector DB, Hadirin memfilter 90%+ percakapan non-operasional, mengekstrak entitas kalender secara terstruktur via Qwen 2.5 (7B), dan menjalankan state machine tahan gangguan (Temporal.io) sebelum mutasi status database permanen.',
         star: {
-          situation: 'Aplikasi presensi konvensional umumnya kaku, hanya berbasis form pasif yang rentan disalahgunakan, menyulitkan manajer dalam menyetujui izin tanpa melihat kapasitas aktif tim di lapangan, dan seringkali gagal menangani jadwal shift kompleks seperti shift malam yang melintasi tengah malam (cross-midnight).',
-          task: 'Merancang dan membangun solusi SaaS multi-tenant dari nol (end-to-end architecture) yang mampu melayani beragam perusahaan dengan konfigurasi unik, menjamin isolasi data mutlak, menyediakan presensi berbasis radius lokasi akurat, serta memadukan asisten AI cerdas untuk mempercepat alur kerja HR.',
+          situation: 'Alur operasional staf (penjadwalan shift, permohonan cuti, kapasitas tim) seringkali terhambat oleh pesan chat informal yang tidak terstruktur, formulir manual yang lambat, serta risiko inkonsistensi data dan pelanggaran kebijakan perusahaan.',
+          task: 'Merancang dan membangun engine orkestrasi AI berlatensi rendah yang mampu mengubah permintaan percakapan informal menjadi alur saga multi-tahap yang terverifikasi secara deterministik dengan pengawasan manusia.',
           action: [
-            'Membangun arsitektur Multi-Tenant dengan isolasi data aman dan sistem Dynamic Granular RBAC yang mencakup 35+ granular permissions di 9 modul sistem utama.',
-            'Merancang engine Smart Attendance berbasis Geofencing GPS dengan validasi radius presisi dan penanganan roster shift dinamis lintas tengah malam (cross-midnight scheduling logic).',
-            'Mengembangkan alur persetujuan bertingkat (Multi-Tier Hierarchical Approval: Staff → Leader/Supervisor → HR Admin) dengan state machine yang transparan.',
-            'Mengintegrasikan AI Workforce Co-pilot berbasis LLM (Gemini API): fitur Chat-to-Action untuk pengajuan izin tanpa form rumit, Context-Aware Approval untuk simulasi dampak kapasitas tim saat manajer mereview cuti, dan HR Policy Knowledge Assistant berbasis dokumen tenant.',
-            'Mendesain skema basis data relasional MySQL performa tinggi dengan foreign key constraints ketat, audit trail logging, dan soft deletes.'
+            'Semantic RAG Gatekeeper: Mengembangkan AI gateway berlatensi rendah dengan FastAPI, Qdrant Vector DB, dan FastEmbed (BAAI/bge-m3), memfilter 90%+ percakapan non-operasional dan memperkaya konteks pengguna secara deterministik (roster shift, kuota cuti).',
+            'Structured Entity Extraction: Menerapkan Qwen 2.5 (7B) via Ollama dengan penegakan skema output JSON ketat dan resolusi zona waktu real-time untuk kalkulasi kalender percakapan.',
+            'Durable Workflow Execution: Mengimplementasikan state machine Temporal.io untuk mengorkestrasi saga multi-tahap (aktivitas atomik: validasi SOP, penegakan Segregation-of-Duties, commit database MySQL, dan pengiriman notifikasi approval manajer).',
+            'Human-in-the-Loop (HITL) Safety: Membangun pola persetujuan dua fase via Telegram Bot API dan Node.js/Express, melakukan staging draft permintaan berumur pendek sebelum mutasi status permanen ke database.',
+            'Persistensi Data Relasional & Vektor Terintegrasi: Merancang skema sinkron antara PostgreSQL, MySQL, dan Qdrant dengan jejak audit komprehensif dan kemampuan rollback otomatis.'
           ],
-          result: 'Menghasilkan platform SaaS B2B siap pakai dengan skalabilitas enterprise yang mengotomasi 70% proses administratif absensi dan permohonan izin karyawan, serta memberikan visibilitas penuh bagi pimpinan perusahaan terhadap operasional staf.'
+          result: 'Berhasil memfilter 90%+ percakapan tidak relevan, mencapai 100% kepatuhan skema JSON terstruktur, dan menjamin eksekusi alur kerja yang tangguh tanpa rekor data database yang yatim (orphaned records).'
         },
         keyFeatures: [
           {
-            title: 'Arsitektur Multi-Tenant & Granular RBAC',
-            desc: 'Isolasi data aman antar organisasi/tenant dengan matriks hak akses dinamis (35+ granular permissions terbagi di 9 modul sistem) untuk fleksibilitas otoritas per pengguna.'
+            title: 'Semantic RAG Gatekeeper',
+            desc: 'AI gateway berlatensi rendah menggunakan FastAPI, Qdrant, dan FastEmbed (BAAI/bge-m3) untuk memfilter 90%+ percakapan dan menyuntikkan konteks shift.'
           },
           {
-            title: 'Smart Attendance & Cross-Midnight Roster Engine',
-            desc: 'Presensi cerdas berbasis geofencing GPS akurat dan algoritma shift khusus yang menangani jadwal kerja lintas malam (misal: 22:00 - 06:00 keesokan harinya) tanpa duplikasi log.'
+            title: 'Structured Entity Extraction (Qwen 2.5)',
+            desc: 'Penerapan Qwen 2.5 (7B) via Ollama yang memaksakan skema JSON ketat dan perhitungan kalender sadar zona waktu.'
           },
           {
-            title: 'Multi-Tier Hierarchical Approval Chains',
-            desc: 'Alur persetujuan terstruktur untuk pengajuan cuti, izin, dan lembur (Karyawan → Team Leader → HR Administrator) lengkap dengan notifikasi status real-time.'
+            title: 'Durable Workflow Execution (Temporal.io)',
+            desc: 'State machine tahan gangguan yang mengoordinasikan aktivitas atomik: cek SOP, Segregation-of-Duties, dan commit database.'
           },
           {
-            title: 'AI Workforce Co-Pilot (Diferensiator Utama)',
-            desc: 'Fitur percakapan natural cerdas: Chat-to-Action untuk mengajukan izin instan, Context-Aware Approval untuk menghitung dampak beban staf sebelum atasan menyetujui, dan Tanya-Jawab SOP Regulasi Perusahaan.'
+            title: 'Human-in-the-Loop (HITL) Safety',
+            desc: 'Pola approval dua fase via Telegram Bot API dan Express untuk menahan draft permintaan sementara sebelum commit permanen.'
           },
           {
-            title: 'Real-Time Executive Analytics Dashboard',
-            desc: 'Panel kendali eksekutif dengan metrik kehadiran harian, tren keterlambatan, distribusi departemen, dan rekapitulasi penggajian (payroll readiness).'
+            title: 'Isolasi Multi-Tenant & Granular RBAC',
+            desc: 'Pemisahan data tingkat organisasi yang aman dengan matriks 35+ permissions di 9 modul sistem.'
           }
         ],
-        techStack: ['React.js', 'Tailwind CSS', 'Context API', 'Lucide Icons', 'Vite', 'Node.js', 'Express.js', 'RESTful API', 'MySQL', 'Gemini API'],
+        techStack: ['Python 3.12', 'FastAPI', 'Node.js', 'Temporal.io', 'Qdrant', 'Ollama (Qwen 2.5)', 'FastEmbed', 'PostgreSQL', 'MySQL', 'Docker Compose'],
         screenshots: [
           {
             url: '/projects/hadirin/screen-1-dashboard.png',
